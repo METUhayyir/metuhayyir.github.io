@@ -1,0 +1,124 @@
+h1 {
+	font-family: "Charm", cursive;
+	font-weight: 700;
+	font-style: normal;
+	font-size: 52px;
+}
+h1, h2, h3 {
+	text-align: center;
+	margin: 0;
+	color: #8c4726;
+}
+
+p {
+	text-align: center;
+	line-height: 3.6;
+	color: #8c4726;
+	margin-top:-20px;
+}
+body {
+	
+	background-image: url(https://slidescorner.com/wp-content/uploads/2022/09/03-Bruce-Antique-Old-Paper-Background-by-SlidesCorner.jpg);
+	background-repeat: no repeat;
+	background-attachment: fixed;
+	background-size: cover;
+
+}
+
+.word-display {
+    font-size: 3em;
+    text-align: center;
+    margin: 10px auto;
+	background-color: #8c4726;
+	padding: 10px 14px;
+	color: white;
+	border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	width: fit-content;
+	max-width: 300px;
+}
+
+.button {
+	width: 300px;
+	margin-left: auto;
+    margin-right: auto;
+	margin-top: 150px;
+	margin-bottom: 5px;
+	border-radius: 8px;
+		border-style: none;
+	
+	font-size: 1.25rem;
+	font-weight: 600;
+	text-transform: uppercase;
+	
+}
+
+.button2 {
+	width: 200px;
+	margin-left: auto;
+    margin-right: auto;
+	margin-top: 170px;
+	border-radius: 8px;
+	border-style: none;
+	
+	font-size: 1.25rem;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+a {
+	color: #8c4726;
+}
+
+a:hover {
+	color: #ce744b;
+}
+
+.container {
+	margin-left: auto;
+    margin-right: auto;
+	margin-top: 90px;
+	text-align: center;
+	
+}
+.charm-regular {
+  font-family: "Charm", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.charm-bold {
+  font-family: "Charm", cursive;
+  font-weight: 700;
+  font-style: normal;
+}
+
+#answerInput {
+    margin-bottom: 5px;
+    padding: 4px;
+	width: 200px;
+	box-sizing: border-box;
+}
+
+#submitbutton {
+    margin-top: 2px;
+    padding: 4px 8px;
+}
+
+#skipbutton {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    padding: 4px 8px;
+}
+
+.keyboard-container {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.keyboard-button {
+    padding: 10px 15px;
+    font-size: 16px;
+    margin: 5px;
+    display: inline-block;
+}
