@@ -12,7 +12,7 @@ h1, h2, h3 {
 
 p {
 	text-align: center;
-	line-height: 3.6;
+	line-height: 3;
 	color: #8c4726;
 	margin-top:-20px;
 }
@@ -45,12 +45,11 @@ body {
 	margin-top: 150px;
 	margin-bottom: 5px;
 	border-radius: 8px;
-		border-style: none;
+	border-style: none;
 	
 	font-size: 1.25rem;
 	font-weight: 600;
 	text-transform: uppercase;
-	
 }
 
 .button2 {
@@ -82,15 +81,15 @@ a:hover {
 	
 }
 .charm-regular {
-  font-family: "Charm", cursive;
-  font-weight: 400;
-  font-style: normal;
+	font-family: "Charm", cursive;
+	font-weight: 400;
+	font-style: normal;
 }
 
 .charm-bold {
-  font-family: "Charm", cursive;
-  font-weight: 700;
-  font-style: normal;
+	font-family: "Charm", cursive;
+	font-weight: 700;
+	font-style: normal;
 }
 
 #answerInput {
@@ -121,4 +120,13 @@ a:hover {
     font-size: 16px;
     margin: 5px;
     display: inline-block;
+}
+
+.credits {
+	text-align: center;
+	margin-top: 250px;
+	color: #8c4726;
+
+	font-style: italic;
+	cursor: pointer;
 }
