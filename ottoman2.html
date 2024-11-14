@@ -14,109 +14,110 @@
 		<h2>Ottoman Turkish Practice Hub</h2>
 		<h3>لسان عثمانی</h3>
 		
-<div class="container">
-
-	<div id="result" class="result">Good luck!</div>
-
-	<div id="wordDisplay" class="word-display">عثمان</div>
-
-    <label for="answerInput">Type your answer here:</label><br>
-    <input type="text" id="answerInput" placeholder="Enter answer">
-    <button id="submitbutton" onclick="checkAnswer()">Submit</button>
 	
-	<div id="virtualKeyboard">
-        <button class="key" onclick="addLetter('ʿ')">ʿ</button>
-        <button class="key" onclick="addLetter('ʾ')">ʾ</button>
-        <button class="key" onclick="addLetter('ḳ')">ḳ</button>
-        <button class="key" onclick="addLetter('ṣ')">ṣ</button>
-        <button class="key" onclick="addLetter('s̲')">s̲</button>
-        <button class="key" onclick="addLetter('ṭ')">ṭ</button>
-        <button class="key" onclick="addLetter('ẓ')">ẓ</button>
-        <button class="key" onclick="addLetter('ż')">ż</button>
-        <button class="key" onclick="addLetter('z̲')">z̲</button>
-        <button class="key" onclick="addLetter('ġ')">ġ</button>
-        <button class="key" onclick="addLetter('ñ')">ñ</button>
-        <button class="key" onclick="addLetter('ḫ')">ḫ</button>
-        <button class="key" onclick="addLetter('ḥ')">ḥ</button>
-        <button class="key" onclick="addLetter('ā')">ā</button>
-        <button class="key" onclick="addLetter('ū')">ū</button>
-        <button class="key" onclick="addLetter('ō')">ō</button>
-        <button class="key" onclick="addLetter('ī')">ī</button>
-    </div>
-	
-    <button id="skipbutton" onclick="nextWord(); document.getElementById('result').textContent = 'Word Skipped!'; document.getElementById('result').style.color='Blue'">Skip Word</button>
-	    
-</div>
+		<div class="container">
 
-<script>
-	const words = [
-        { ottoman: 'عثمان', answer: ['ʿOs̲mān'] },
-		{ ottoman: 'باش', answer: ['Baş'] },
-		{ ottoman: 'تاش', answer: ['Taş'] },
-		{ ottoman: 'قاش', answer: ['ḳaş'] },
-		{ ottoman: 'اکمک', answer: ['Ekmek'] },
-		{ ottoman: 'صوک', answer: ['ṣoñ'] },
-		{ ottoman: 'تورک', answer: ['Türk'] },
-		{ ottoman: 'صری', answer: ['ṣarı'] },
-		{ ottoman: 'دوکون', answer: ['Düğün', 'Dökün'] },
-		{ ottoman: 'دوقون', answer: ['Doḳun'] },
-		{ ottoman: 'تدريس', answer: ['Tedrīs'] },
-		{ ottoman: 'آطه', answer: ['Aṭa', 'Ada'] },
-		{ ottoman: 'آناطولی', answer: ['Anaṭoli', 'Anadolu'] },
-		{ ottoman: 'علی', answer: ['ʿAli'] },
-		{ ottoman: 'عمر', answer: ['ʿÖmer'] },
-		{ ottoman: 'عصمت', answer: ['ʿİṣmet'] },
-		{ ottoman: 'کوکرجن', answer: ['Güvercin'] },
-		
-	];
-	
-	let currentIndex = 0;
-	
-	function displayWord() {
-        document.getElementById("wordDisplay").textContent = words[currentIndex].ottoman;
-        document.getElementById("answerInput").value = "";
-    }
-	function checkAnswer() {
-        const userAnswer = document.getElementById("answerInput").value.trim();
-        const correctAnswers = words[currentIndex].answer;
+			<div id="result" class="result">Good luck!</div>
 
-        if (correctAnswers.some(answer => userAnswer.toLowerCase() === answer.toLowerCase())) {
-            document.getElementById("result").textContent = `Your ${userAnswer} answer was correct!`;
-            document.getElementById("result").style.color = "green";
-			words.splice(currentIndex,1);
-			nextWord();
+			<div id="wordDisplay" class="word-display">عثمان</div>
+
+			<label for="answerInput">Type your answer here:</label><br>
+			<input type="text" id="answerInput" placeholder="Enter answer">
+			<button id="submitbutton" onclick="checkAnswer()">Submit</button>
 			
-        } else {
-            document.getElementById("result").textContent = `Incorrect. The correct answer is: ${correctAnswers}`;
-            document.getElementById("result").style.color = "red";
-        }
-    }
-	function nextWord() {
-		if(words.length == 0){
-			document.getElementById("result").textContent = "Congratulations! You have completed the practice.";
-			document.getElementById("result").style.color = "green";
-			document.getElementById("skipbutton").disabled = true;
-			document.getElementById("submitbutton").disabled = true;
-			return
-		}
-		let tempIndex = currentIndex;
-        currentIndex = Math.floor(Math.random() * words.length);
-		if(tempIndex === currentIndex){
-			currentIndex = (currentIndex + 1) % words.length;
-		}
-        displayWord();
-	}
-	function addLetter(letter) { document.getElementById("answerInput").value += letter;
-			document.getElementById("answerInput").focus();
-    }
-	
-displayWord();
+			<div id="virtualKeyboard">
+				<button class="key" onclick="addLetter('ʿ')">ʿ</button>
+				<button class="key" onclick="addLetter('ʾ')">ʾ</button>
+				<button class="key" onclick="addLetter('ḳ')">ḳ</button>
+				<button class="key" onclick="addLetter('ṣ')">ṣ</button>
+				<button class="key" onclick="addLetter('s̲')">s̲</button>
+				<button class="key" onclick="addLetter('ṭ')">ṭ</button>
+				<button class="key" onclick="addLetter('ẓ')">ẓ</button>
+				<button class="key" onclick="addLetter('ż')">ż</button>
+				<button class="key" onclick="addLetter('z̲')">z̲</button>
+				<button class="key" onclick="addLetter('ġ')">ġ</button>
+				<button class="key" onclick="addLetter('ñ')">ñ</button>
+				<button class="key" onclick="addLetter('ḫ')">ḫ</button>
+				<button class="key" onclick="addLetter('ḥ')">ḥ</button>
+				<button class="key" onclick="addLetter('ā')">ā</button>
+				<button class="key" onclick="addLetter('ū')">ū</button>
+				<button class="key" onclick="addLetter('ō')">ō</button>
+				<button class="key" onclick="addLetter('ī')">ī</button>
+			</div>
+			
+			<button id="skipbutton" onclick="nextWord(); document.getElementById('result').textContent = 'Word Skipped!'; document.getElementById('result').style.color='Blue'">Skip Word</button>
+				
+		</div>
 
-</script>
+	<script>
+		const words = [
+			{ ottoman: 'عثمان', answer: ['ʿOs̲mān'] },
+			{ ottoman: 'باش', answer: ['Baş'] },
+			{ ottoman: 'تاش', answer: ['Taş'] },
+			{ ottoman: 'قاش', answer: ['ḳaş'] },
+			{ ottoman: 'اکمک', answer: ['Ekmek'] },
+			{ ottoman: 'صوک', answer: ['ṣoñ'] },
+			{ ottoman: 'تورک', answer: ['Türk'] },
+			{ ottoman: 'صری', answer: ['ṣarı'] },
+			{ ottoman: 'دوکون', answer: ['Düğün', 'Dökün'] },
+			{ ottoman: 'دوقون', answer: ['Doḳun'] },
+			{ ottoman: 'تدريس', answer: ['Tedrīs'] },
+			{ ottoman: 'آطه', answer: ['Aṭa', 'Ada'] },
+			{ ottoman: 'آناطولی', answer: ['Anaṭoli', 'Anadolu'] },
+			{ ottoman: 'علی', answer: ['ʿAli'] },
+			{ ottoman: 'عمر', answer: ['ʿÖmer'] },
+			{ ottoman: 'عصمت', answer: ['ʿİṣmet'] },
+			{ ottoman: 'کوکرجن', answer: ['Güvercin'] },
+			
+		];
+		
+		let currentIndex = 0;
+		
+		function displayWord() {
+			document.getElementById("wordDisplay").textContent = words[currentIndex].ottoman;
+			document.getElementById("answerInput").value = "";
+		}
+		function checkAnswer() {
+			const userAnswer = document.getElementById("answerInput").value.trim();
+			const correctAnswers = words[currentIndex].answer;
 
-<div class="button2">
-		<p><a href="index.html">Back to menu</a></p>
-</div>
+			if (correctAnswers.some(answer => userAnswer.toLowerCase() === answer.toLowerCase())) {
+				document.getElementById("result").textContent = `Your ${userAnswer} answer was correct!`;
+				document.getElementById("result").style.color = "green";
+				words.splice(currentIndex,1);
+				nextWord();
+				
+			} else {
+				document.getElementById("result").textContent = `Incorrect. The correct answer is: ${correctAnswers}`;
+				document.getElementById("result").style.color = "red";
+			}
+		}
+		function nextWord() {
+			if(words.length == 0){
+				document.getElementById("result").textContent = "Congratulations! You have completed the practice.";
+				document.getElementById("result").style.color = "green";
+				document.getElementById("skipbutton").disabled = true;
+				document.getElementById("submitbutton").disabled = true;
+				return
+			}
+			let tempIndex = currentIndex;
+			currentIndex = Math.floor(Math.random() * words.length);
+			if(tempIndex === currentIndex){
+				currentIndex = (currentIndex + 1) % words.length;
+			}
+			displayWord();
+		}
+		function addLetter(letter) { document.getElementById("answerInput").value += letter;
+				document.getElementById("answerInput").focus();
+		}
+		
+	displayWord();
+
+	</script>
+
+	<div class="button2">
+			<p><a href="index.html">Back to menu</a></p>
+	</div>
 	
 </body>
 		
