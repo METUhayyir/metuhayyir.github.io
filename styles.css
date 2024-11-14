@@ -20,7 +20,7 @@ body {
 	
 	background-image: url(https://slidescorner.com/wp-content/uploads/2022/09/03-Bruce-Antique-Old-Paper-Background-by-SlidesCorner.jpg);
 	background-repeat: no repeat;
-	background-attachment: fixed;
+	background-attachment: scroll;
 	background-size: cover;
 
 }
