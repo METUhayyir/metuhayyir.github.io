@@ -65,6 +65,19 @@ body {
 	text-transform: uppercase;
 }
 
+.button3 {
+	width: 200px;
+	margin-left: auto;
+    margin-right: auto;
+	margin-top: 240px;
+	border-radius: 8px;
+	border-style: none;
+	
+	font-size: 1.25rem;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
 a {
 	color: #8c4726;
 }
