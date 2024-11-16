@@ -17,7 +17,7 @@
         <div>
 
         <img><source src="img/map1.png" type="image/png"></img>
-        <img src="img/map1.png" alt="Map" class="map" width="980" height="518">
+        <img src="img/map1.png" alt="Map" class="map">
 
         </div>
 
@@ -119,7 +119,7 @@
             let correctCount = 0;
             cities.forEach((city, index) => {
                 const userAnswer = document.getElementById(`answer${index + 1}`).value.trim();
-                if (city.correctAnswer.some(answer => userAnswer === answer)) {
+                if (city.correctAnswer.some(answer => userAnswer.toLowerCase() === answer.toLowerCase())) {
                     document.getElementById(`city${index + 1}`).style.backgroundColor = "lightgreen";
                     correctCount++;
             } else {
