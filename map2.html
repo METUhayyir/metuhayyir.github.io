@@ -15,9 +15,7 @@
 		<h3>لسان عثمانی</h3>
 
         <div>
-
-        <img src="img/map2.png" alt="Map" class="map">
-
+            <img src="img/map2.png" alt="Map" class="map">
         </div>
 
         <div id="virtualKeyboard2">
@@ -176,18 +174,19 @@
             ];
 
             function checkAnswers() {
-            let correctCount = 0;
-            cities.forEach((city, index) => {
-                const userAnswer = document.getElementById(`answer${index + 1}`).value.trim();
-                if (city.correctAnswer.some(answer => userAnswer === answer)) {
-                    document.getElementById(`city${index + 1}`).style.backgroundColor = "lightgreen";
-                    correctCount++;
-            } else {
-             document.getElementById(`city${index + 1}`).style.backgroundColor = "lightcoral";
+                let correctCount = 0;
+                cities.forEach((city, index) => {
+                    const userAnswer = document.getElementById(`answer${index + 1}`).value.trim();
+                    if (city.correctAnswer.some(answer => userAnswer === answer)) {
+                        document.getElementById(`answer${index + 1}`).style.borderColor = "#119915";
+                        correctCount++;
+                    } else {
+                        document.getElementById(`answer${index + 1}`).style.borderColor = "#cf1111";
+                    }
+                    document.getElementById(`answer${index + 1}`).style.borderWidth = "3.5px";
+                });
+                document.getElementById("result").textContent = `${correctCount} out of ${cities.length} correct!`;
             }
-        });
-        document.getElementById("result").textContent = `${correctCount} out of ${cities.length} correct!`;
-    }
     
             const checkButton = document.createElement('button');
             checkButton.textContent = "Check Answers";
@@ -219,12 +218,18 @@
                     currentInput.focus();
                 }
             }
+
+            document.addEventListener("keydown", event => {
+                if (event.key === "Enter") {
+                    checkAnswers();
+                }
+            })
         </script>
 
 
         <div class="button3">
 			<p><a href="mapmenu.html">Back to menu</a></p>
-	    </div
+	    </div>
 	
 	
 	
