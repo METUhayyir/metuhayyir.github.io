@@ -124,6 +124,12 @@ a:hover {
     padding: 4px 8px;
 }
 
+#showbutton {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    padding: 4px 8px;
+}
+
 .keyboard-container {
     display: inline-block;
     margin-bottom: 10px;

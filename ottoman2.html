@@ -46,7 +46,7 @@
 			</div>
 			
 			<button id="skipbutton" onclick="nextWord(); document.getElementById('result').textContent = 'Word Skipped!'; document.getElementById('result').style.color='Blue'">Skip Word</button>
-				
+			<button id="showbutton" onclick="showAnswer()">Show Answer</button>
 		</div>
 
 	<script>
@@ -88,7 +88,7 @@
 				nextWord();
 				
 			} else {
-				document.getElementById("result").textContent = `Incorrect. The correct answer is: ${correctAnswers}`;
+				document.getElementById("result").textContent = `Incorrect.`;
 				document.getElementById("result").style.color = "red";
 			}
 		}
@@ -110,7 +110,10 @@
 		function addLetter(letter) { document.getElementById("answerInput").value += letter;
 				document.getElementById("answerInput").focus();
 		}
-		
+		function showAnswer() {
+			document.getElementById("result").textContent = words[currentIndex].answer;
+			document.getElementById("result").style.color = "blue";
+		}
 	displayWord();
 
 	</script>
