@@ -93,7 +93,6 @@
             </div>
         </div>
     
-        <div class="result" id="result">Good luck!</div>
     
         <script>
             const cities = [
@@ -132,6 +131,27 @@
             checkButton.style.marginTop = "20px";
             checkButton.onclick = checkAnswers;
             document.body.appendChild(checkButton);
+            
+            document.body.appendChild(document.createElement("br"));
+            const resultText = document.createElement("div");
+            resultText.className = "result";
+            resultText.id = "result";
+            resultText.textContent = "Good Luck!"
+            document.body.appendChild(resultText);
+
+            document.body.appendChild(document.createElement("br"));
+            const showButton = document.createElement('button');
+            showButton.textContent = "Show Answers";
+            showButton.style.marginTop = "20px";
+            showButton.onclick = showAnswers;
+            document.body.appendChild(showButton);
+
+            const hideButton = document.createElement('button');
+            hideButton.textContent = "Hide Answers";
+            hideButton.style.marginTop = "20px";
+            hideButton.onclick = hideAnswers;
+            hideButton.style.marginLeft = "8px";
+            document.body.appendChild(hideButton);
 
             let currentInput = null;
 
@@ -153,9 +173,34 @@
 
             function addLetter(letter) {
                 if (currentInput) {
-                    currentInput.value += letter;
-                    currentInput.focus();
+                    const input = currentInput;
+                    const curinx = input.selectionStart;
+                    const val = input.value;
+                    const before = val.substring(0,curinx);
+                    const after = val.substring(curinx);
+                    input.value = before + letter + after;
+                    input.focus();
+                    input.selectionStart = curinx+letter.length;
+                    input.selectionEnd = curinx+letter.length;
                 }
+            }
+
+            function showAnswers() {
+                for (let i = 1; i < 14; i++) {
+                    document.getElementById(`show${i}`).textContent = cities[i-1].correctAnswer;
+                }
+            }
+
+            function hideAnswers() {
+                for (let i = 1; i < 14; i++) {
+                    document.getElementById(`show${i}`).textContent = "";
+                }
+            }
+            for (let i = 1; i < 14; i++) {
+                const show = document.createElement("div");
+                show.style.color = "blue";
+                show.id = `show${i}`;
+                document.getElementById(`city${i}`).appendChild(show);
             }
 
             document.addEventListener("keydown", event => {

@@ -107,8 +107,16 @@
 			}
 			displayWord();
 		}
-		function addLetter(letter) { document.getElementById("answerInput").value += letter;
-				document.getElementById("answerInput").focus();
+		function addLetter(letter) { 
+			const input = document.getElementById("answerInput");
+			const curinx = input.selectionStart;
+			const val = input.value;
+			const before = val.substring(0,curinx);
+			const after = val.substring(curinx);
+			input.value = before + letter + after;
+			input.focus();
+			input.selectionStart = curinx+letter.length;
+			input.selectionEnd = curinx+letter.length;
 		}
 		function showAnswer() {
 			document.getElementById("result").textContent = words[currentIndex].answer;
