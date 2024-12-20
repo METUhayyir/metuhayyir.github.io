@@ -1,0 +1,58 @@
+<html lang=“en”>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>METUhayyir</title>
+		<meta name="description" content="Ottoman Practice Hub, Learn & Practice Ottoman Turkish. Osmanlıca Öğrenme ve Çalışma Sitesi. Kelime, Harita, Osmanlıca Transkripsiyon Alfabesi ve Klavyesi">
+		<meta name="keywords" content="Osmanlıca, Ottoman Turkish, Ottoman Vocabulary, Ottoman Practice, Osmanlıca ">
+		<link rel="shortcut icon" type="image/png" href="../shared/img/favicon.png">
+		<link href="../shared/styles.css" rel="stylesheet"/>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Reem+Kufi:wght@400..700&display=swap" rel="stylesheet">
+		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7334942805048387"
+     crossorigin="anonymous"></script>
+	</head>
+	
+	<body>
+		<div class="language-switcher">
+			<img src="../shared/img/Turkishlanguage.png" alt="Turkish Flag" class="flag" id="turkish-flag" onclick="changeLanguage('tr')" />
+			<img src="../shared/img/Englishlanguage.png" alt="English Flag" class="flag" id="english-flag" onclick="changeLanguage('en')" />
+		</div>
+		<audio loop id="bgmusic">
+			<source src="../shared/sound/bgmusic.mp3" type="audio/mp3">
+		</audio>
+		<h1>METUhayyir</h1>
+		<h2>Ottoman Turkish Practice Hub</h2>
+		<h3>لسان عثمانی</h3>
+		<div class="button">
+			<p><a href="ottoman2.html">Vocabulary Practice</a></p>
+			<p><a href="menu2.html">Triliteral Roots</a></p>
+			<p><a href="mapmenu.html">Map Practice</a></p>
+			<p><a href="typewriter.html">Transcription Keyboard</a></p>
+		</div>
+		<div class="credits" id="credits" onclick="document.getElementById('bgmusic').play()">
+			Kuzey Ilgar HIST & Berken CENG
+		</div>
+		<script>
+			const userLang = navigator.language || navigator.userLanguage; 
+
+				if (userLang.startsWith('tr')) {
+				window.location.href = "/tr/";
+				} else {
+				window.location.href = "/en/";
+			}
+			function changeLanguage(language) {
+           		 if (language === 'tr') {
+                	window.location.href = '../tr/index.html';
+            	} else if (language === 'en') {
+                	window.location.href = '../en/index.html';
+            	}
+        	}
+
+		</script>	
+	
+	
+	
+	
+	</body>
+		

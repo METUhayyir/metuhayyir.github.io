@@ -1,0 +1,224 @@
+<html lang=“en”>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>METUhayyir</title>
+		<link rel="shortcut icon" type="image/png" href="../shared/img/favicon.png">
+		<link href="../shared/styles.css" rel="stylesheet"/>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Reem+Kufi:wght@400..700&display=swap" rel="stylesheet">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7334942805048387"
+        crossorigin="anonymous"></script>
+	</head>
+	
+	<body>
+		<h1>METUhayyir</h1>
+		<h2>Ottoman Turkish Practice Hub</h2>
+		<h3>لسان عثمانی</h3>
+
+        <div>
+            <img src="../shared/img/map1.png" alt="Map" class="map">
+        </div>
+
+        <div id="virtualKeyboard2">
+            <button class="key" onclick="addLetter('ʿ')">ʿ</button>
+            <button class="key" onclick="addLetter('ʾ')">ʾ</button>
+            <button class="key" onclick="addLetter('ḳ')">ḳ</button>
+            <button class="key" onclick="addLetter('ṣ')">ṣ</button>
+            <button class="key" onclick="addLetter('s̲')">s̲</button>
+            <button class="key" onclick="addLetter('ṭ')">ṭ</button>
+            <button class="key" onclick="addLetter('ẓ')">ẓ</button>
+            <button class="key" onclick="addLetter('ż')">ż</button>
+            <button class="key" onclick="addLetter('z̲')">z̲</button>
+            <button class="key" onclick="addLetter('ġ')">ġ</button>
+            <button class="key" onclick="addLetter('ñ')">ñ</button>
+            <button class="key" onclick="addLetter('ḫ')">ḫ</button>
+            <button class="key" onclick="addLetter('ḥ')">ḥ</button>
+            <button class="key" onclick="addLetter('ā')">ā</button>
+            <button class="key" onclick="addLetter('ū')">ū</button>
+            <button class="key" onclick="addLetter('ō')">ō</button>
+            <button class="key" onclick="addLetter('ī')">ī</button>
+        </div>
+
+        <div class="answers">
+            <div class="answer-box" id="city1">
+                <span>1.</span>
+                <input type="text" id="answer1" onclick="showKeyboard(this)" placeholder="Type city name (ex: İzmir)">
+            </div>
+            <div class="answer-box" id="city2">
+                <span>2.</span>
+                <input type="text" id="answer2" onclick="showKeyboard(this)">
+            </div>
+            <div class="answer-box" id="city3">
+                <span>3.</span>
+                <input type="text" id="answer3" onclick="showKeyboard(this)">
+            </div>
+            <div class="answer-box" id="city4">
+                <span>4.</span>
+                <input type="text" id="answer4" onclick="showKeyboard(this)">
+            </div>
+            <div class="answer-box" id="city5">
+                <span>5.</span>
+                <input type="text" id="answer5" onclick="showKeyboard(this)">
+            </div>
+            <div class="answer-box" id="city6">
+                <span>6.</span>
+                <input type="text" id="answer6" onclick="showKeyboard(this)">
+            </div>
+            <div class="answer-box" id="city7">
+                <span>7.</span>
+                <input type="text" id="answer7" onclick="showKeyboard(this)">
+            </div>
+            <div class="answer-box" id="city8">
+                <span>8.</span>
+                <input type="text" id="answer8" onclick="showKeyboard(this)">
+            </div>
+            <div class="answer-box" id="city9">
+                <span>9.</span>
+                <input type="text" id="answer9" onclick="showKeyboard(this)">
+            </div>
+            <div class="answer-box" id="city10">
+                <span>10.</span>
+                <input type="text" id="answer10" onclick="showKeyboard(this)">
+            </div>
+            <div class="answer-box" id="city11">
+                <span>11.</span>
+                <input type="text" id="answer11" onclick="showKeyboard(this)">
+            </div>
+            <div class="answer-box" id="city12">
+                <span>12.</span>
+                <input type="text" id="answer12" onclick="showKeyboard(this)">
+            </div>
+            <div class="answer-box" id="city13">
+                <span>13.</span>
+                <input type="text" id="answer13" onclick="showKeyboard(this)">
+            </div>
+        </div>
+    
+    
+        <script>
+            const cities = [
+                { name: "City 1", correctAnswer: ["ʿUşāḳ"] },
+                { name: "City 2", correctAnswer: ["Çivril"] },
+                { name: "City 3", correctAnswer: ["Deñizli"] },
+                { name: "City 4", correctAnswer: ["ḳarayol"] },
+                { name: "City 5", correctAnswer: ["Dinār"] },
+                { name: "City 6", correctAnswer: ["Burdur"] },
+                { name: "City 7", correctAnswer: ["Ispārṭa"] },
+                { name: "City 8", correctAnswer: ["Afyonḳaraḥiṣār"] },
+                { name: "City 9", correctAnswer: ["Aḳşehir"] },
+                { name: "City 10", correctAnswer: ["Yālvāç"] },
+                { name: "City 11", correctAnswer: ["Eğirdir"] },
+                { name: "City 12", correctAnswer: ["Begşehir"] },
+                { name: "City 13", correctAnswer: ["ḳonya"] }
+            ];
+
+            function checkAnswers() {
+                let correctCount = 0;
+                cities.forEach((city, index) => {
+                    const userAnswer = document.getElementById(`answer${index + 1}`).value.trim();
+                    if (city.correctAnswer.some(answer => userAnswer.toLowerCase() === answer.toLowerCase())) {
+                        document.getElementById(`answer${index + 1}`).style.borderColor = "#119915";
+                        correctCount++;
+                    } else {
+                        document.getElementById(`answer${index + 1}`).style.borderColor = "#cf1111";
+                    }
+                    document.getElementById(`answer${index + 1}`).style.borderWidth = "3.5px";
+                });
+                document.getElementById("result").textContent = `${correctCount} out of ${cities.length} correct!`;
+            }  
+    
+            const checkButton = document.createElement('button');
+            checkButton.textContent = "Check Answers";
+            checkButton.style.marginTop = "20px";
+            checkButton.onclick = checkAnswers;
+            document.body.appendChild(checkButton);
+            
+            document.body.appendChild(document.createElement("br"));
+            const resultText = document.createElement("div");
+            resultText.className = "result";
+            resultText.id = "result";
+            resultText.textContent = "Good Luck!"
+            document.body.appendChild(resultText);
+
+            document.body.appendChild(document.createElement("br"));
+            const showButton = document.createElement('button');
+            showButton.textContent = "Show Answers";
+            showButton.style.marginTop = "20px";
+            showButton.onclick = showAnswers;
+            document.body.appendChild(showButton);
+
+            const hideButton = document.createElement('button');
+            hideButton.textContent = "Hide Answers";
+            hideButton.style.marginTop = "20px";
+            hideButton.onclick = hideAnswers;
+            hideButton.style.marginLeft = "8px";
+            document.body.appendChild(hideButton);
+
+            let currentInput = null;
+
+            function showKeyboard(inputElement) {
+                currentInput = inputElement;
+                const keyboard = document.getElementById('virtualKeyboard2');
+
+                const rect = inputElement.getBoundingClientRect();
+                keyboard.style.left = `${rect.left}px`;
+                keyboard.style.top = `${rect.bottom + window.scrollY}px`;
+
+                keyboard.style.display = 'block';
+            }
+
+            function hideKeyboard() {
+                const keyboard = document.getElementById('virtualKeyboard2');
+                keyboard.style.display = 'none';
+            }
+
+            function addLetter(letter) {
+                if (currentInput) {
+                    const input = currentInput;
+                    const curinx = input.selectionStart;
+                    const val = input.value;
+                    const before = val.substring(0,curinx);
+                    const after = val.substring(curinx);
+                    input.value = before + letter + after;
+                    input.focus();
+                    input.selectionStart = curinx+letter.length;
+                    input.selectionEnd = curinx+letter.length;
+                }
+            }
+
+            function showAnswers() {
+                for (let i = 1; i < 14; i++) {
+                    document.getElementById(`show${i}`).textContent = cities[i-1].correctAnswer;
+                }
+            }
+
+            function hideAnswers() {
+                for (let i = 1; i < 14; i++) {
+                    document.getElementById(`show${i}`).textContent = "";
+                }
+            }
+            for (let i = 1; i < 14; i++) {
+                const show = document.createElement("div");
+                show.style.color = "blue";
+                show.id = `show${i}`;
+                document.getElementById(`city${i}`).appendChild(show);
+            }
+
+            document.addEventListener("keydown", event => {
+                if (event.key === "Enter") {
+                    checkAnswers();
+                }
+            })
+        </script>
+
+
+        <div class="button3">
+			<p><a href="mapmenu.html">Back to menu</a></p>
+	    </div>
+	
+	
+	
+	
+	
+	</body>
