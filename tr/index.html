@@ -34,15 +34,15 @@
 			Kuzey Ilgar HIST & Berken CENG
 		</div>
 		<script>
-			const userLang = navigator.language || navigator.userLanguage; 
-
-				if (!window.location.pathname.includes(userLang.substring(0, 2))) {
+    		const userLang = navigator.language || navigator.userLanguage; 
+    		const currentPath = window.location.pathname;
+				if (currentPath === "/") {
 					if (userLang.startsWith('tr')) {
 						window.location.href = "/tr/";
 					} else {
 						window.location.href = "/en/";
+					}
 				}
-			}
 			function changeLanguage(language) {
            		 if (language === 'tr') {
                 	window.location.href = '../tr/index.html';
