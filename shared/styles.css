@@ -268,15 +268,16 @@ html {
 
 .language-switcher {
     position: absolute;
-    top: 20px; 
+    top: 20px;
     right: 20px;
     z-index: 1000;
-    display: flex;
-    gap: 10px;
+    display: inline-flex;
+    gap: 5px;
+    justify-content: flex-end;
 }
 
 .flag {
-    width: 40px;
+    width: 45px;
     height: 30px;
     cursor: pointer;
     border-radius: 5px;
@@ -286,4 +287,58 @@ html {
 .flag:hover {
     transform: scale(1.1);
     opacity: 0.8;
+}
+
+@media only screen and (max-width: 768px) {
+    .language-switcher {
+        position: fixed;
+		width: auto;
+        top: 10px;
+        right: 10px;
+        margin-top: 10px;
+        display: flex;
+		justify-content: space-evenly;
+        z-index: 1000;
+    }
+
+    .language-switcher img {
+        width: 30px;
+    }
+
+	.flag {
+        width: 30px;
+        height: 20px;
+		margin: 0 0px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    h2, h3 {
+        font-size: 20px;
+    }
+
+    p {
+        line-height: 1.5;
+        margin-top: 10px;
+    }
+
+    .word-display {
+        font-size: 2em;
+    }
+
+    .button, .button2, .button3 {
+        width: 80%;
+        font-size: 1rem;
+        padding: 12px;
+    }
+
+    .button, .button2, .button3 {
+        margin-top: 20px;
+    }
+
+    .map {
+        max-width: 90%;
+    }
 }
