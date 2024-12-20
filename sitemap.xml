@@ -4,105 +4,213 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
 <url>
   <loc>https://metuhayyir.com.tr/</loc>
-  <lastmod>2024-12-15T16:05:39+00:00</lastmod>
+  <lastmod>2024-12-20T14:31:08+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://metuhayyir.com.tr/ottoman2.html</loc>
-  <lastmod>2024-12-15T16:05:39+00:00</lastmod>
+  <loc>https://metuhayyir.com.tr/en/</loc>
+  <lastmod>2024-12-20T14:31:08+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://metuhayyir.com.tr/menu2.html</loc>
-  <lastmod>2024-12-15T16:05:39+00:00</lastmod>
+  <loc>https://metuhayyir.com.tr/tr/</loc>
+  <lastmod>2024-12-20T14:31:08+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://metuhayyir.com.tr/mapmenu.html</loc>
-  <lastmod>2024-12-15T16:05:39+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://metuhayyir.com.tr/typewriter.html</loc>
-  <lastmod>2024-12-15T16:05:39+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://metuhayyir.com.tr/index.html</loc>
-  <lastmod>2024-12-15T16:05:39+00:00</lastmod>
+  <loc>https://metuhayyir.com.tr/en/ottoman2.html</loc>
+  <lastmod>2024-12-20T14:31:08+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://metuhayyir.com.tr/ismifail.html</loc>
-  <lastmod>2024-12-15T16:05:39+00:00</lastmod>
+  <loc>https://metuhayyir.com.tr/en/menu2.html</loc>
+  <lastmod>2024-12-20T14:31:08+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://metuhayyir.com.tr/ismimeful.html</loc>
-  <lastmod>2024-12-15T16:05:39+00:00</lastmod>
+  <loc>https://metuhayyir.com.tr/en/mapmenu.html</loc>
+  <lastmod>2024-12-20T14:31:08+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://metuhayyir.com.tr/ifalmenu.html</loc>
-  <lastmod>2024-12-15T16:05:39+00:00</lastmod>
+  <loc>https://metuhayyir.com.tr/en/typewriter.html</loc>
+  <lastmod>2024-12-20T14:31:08+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://metuhayyir.com.tr/tefilmenu.html</loc>
-  <lastmod>2024-12-15T16:05:39+00:00</lastmod>
+  <loc>https://metuhayyir.com.tr/tr/ottoman2.html</loc>
+  <lastmod>2024-12-20T14:31:08+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://metuhayyir.com.tr/mufaalemenu.html</loc>
-  <lastmod>2024-12-15T16:05:39+00:00</lastmod>
+  <loc>https://metuhayyir.com.tr/tr/menu2.html</loc>
+  <lastmod>2024-12-20T14:31:08+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://metuhayyir.com.tr/map1.html</loc>
-  <lastmod>2024-12-15T16:05:39+00:00</lastmod>
+  <loc>https://metuhayyir.com.tr/tr/mapmenu.html</loc>
+  <lastmod>2024-12-20T14:31:08+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://metuhayyir.com.tr/map2.html</loc>
-  <lastmod>2024-12-15T16:05:39+00:00</lastmod>
+  <loc>https://metuhayyir.com.tr/tr/typewriter.html</loc>
+  <lastmod>2024-12-20T14:31:08+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://metuhayyir.com.tr/ifal.html</loc>
-  <lastmod>2024-12-15T16:05:39+00:00</lastmod>
+  <loc>https://metuhayyir.com.tr/en/index.html</loc>
+  <lastmod>2024-12-20T14:31:08+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>https://metuhayyir.com.tr/ifalfail.html</loc>
-  <lastmod>2024-12-15T16:05:39+00:00</lastmod>
+  <loc>https://metuhayyir.com.tr/en/ismifail.html</loc>
+  <lastmod>2024-12-20T14:31:08+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>https://metuhayyir.com.tr/ifalmeful.html</loc>
-  <lastmod>2024-12-15T16:05:39+00:00</lastmod>
+  <loc>https://metuhayyir.com.tr/en/ismimeful.html</loc>
+  <lastmod>2024-12-20T14:31:08+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>https://metuhayyir.com.tr/tefil.html</loc>
-  <lastmod>2024-12-15T16:05:39+00:00</lastmod>
+  <loc>https://metuhayyir.com.tr/en/ifalmenu.html</loc>
+  <lastmod>2024-12-20T14:31:08+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>https://metuhayyir.com.tr/tefilmeful.html</loc>
-  <lastmod>2024-12-15T16:05:39+00:00</lastmod>
+  <loc>https://metuhayyir.com.tr/en/tefilmenu.html</loc>
+  <lastmod>2024-12-20T14:31:08+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>https://metuhayyir.com.tr/mufaale.html</loc>
-  <lastmod>2024-12-15T16:05:39+00:00</lastmod>
+  <loc>https://metuhayyir.com.tr/en/mufaalemenu.html</loc>
+  <lastmod>2024-12-20T14:31:08+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>https://metuhayyir.com.tr/mufaalefail.html</loc>
-  <lastmod>2024-12-15T16:05:39+00:00</lastmod>
+  <loc>https://metuhayyir.com.tr/en/map1.html</loc>
+  <lastmod>2024-12-20T14:31:08+00:00</lastmod>
   <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://metuhayyir.com.tr/en/map2.html</loc>
+  <lastmod>2024-12-20T14:31:08+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://metuhayyir.com.tr/tr/ismifail.html</loc>
+  <lastmod>2024-12-20T14:31:08+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://metuhayyir.com.tr/tr/ismimeful.html</loc>
+  <lastmod>2024-12-20T14:31:08+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://metuhayyir.com.tr/tr/ifalmenu.html</loc>
+  <lastmod>2024-12-20T14:31:08+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://metuhayyir.com.tr/tr/tefilmenu.html</loc>
+  <lastmod>2024-12-20T14:31:08+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://metuhayyir.com.tr/tr/mufaalemenu.html</loc>
+  <lastmod>2024-12-20T14:31:08+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://metuhayyir.com.tr/tr/index.html</loc>
+  <lastmod>2024-12-20T14:31:08+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://metuhayyir.com.tr/tr/map1.html</loc>
+  <lastmod>2024-12-20T14:31:08+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://metuhayyir.com.tr/tr/map2.html</loc>
+  <lastmod>2024-12-20T14:31:08+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://metuhayyir.com.tr/en/ifal.html</loc>
+  <lastmod>2024-12-20T14:31:08+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://metuhayyir.com.tr/en/ifalfail.html</loc>
+  <lastmod>2024-12-20T14:31:08+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://metuhayyir.com.tr/en/ifalmeful.html</loc>
+  <lastmod>2024-12-20T14:31:08+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://metuhayyir.com.tr/en/tefil.html</loc>
+  <lastmod>2024-12-20T14:31:08+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://metuhayyir.com.tr/en/tefilmeful.html</loc>
+  <lastmod>2024-12-20T14:31:08+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://metuhayyir.com.tr/en/mufaale.html</loc>
+  <lastmod>2024-12-20T14:31:08+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://metuhayyir.com.tr/en/mufaalefail.html</loc>
+  <lastmod>2024-12-20T14:31:08+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://metuhayyir.com.tr/tr/ifal.html</loc>
+  <lastmod>2024-12-20T14:31:08+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://metuhayyir.com.tr/tr/ifalfail.html</loc>
+  <lastmod>2024-12-20T14:31:08+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://metuhayyir.com.tr/tr/ifalmeful.html</loc>
+  <lastmod>2024-12-20T14:31:08+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://metuhayyir.com.tr/tr/tefil.html</loc>
+  <lastmod>2024-12-20T14:31:08+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://metuhayyir.com.tr/tr/tefilmeful.html</loc>
+  <lastmod>2024-12-20T14:31:08+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://metuhayyir.com.tr/tr/mufaale.html</loc>
+  <lastmod>2024-12-20T14:31:08+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://metuhayyir.com.tr/tr/mufaalefail.html</loc>
+  <lastmod>2024-12-20T14:31:08+00:00</lastmod>
+  <priority>0.41</priority>
 </url>
 
 
