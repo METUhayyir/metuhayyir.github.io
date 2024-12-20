@@ -1,0 +1,19 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>METUhayyir</title>
+    <meta http-equiv="refresh" content="0; url=/en/" />
+    <script>
+      const userLang = navigator.language || navigator.userLanguage;
+      if (userLang.startsWith("tr")) {
+        window.location.href = "/tr/";
+      } else {
+        window.location.href = "/en/";
+      }
+    </script>
+  </head>
+  <body>
+    <p>If you are not redirected, please visit <a href="/en/">English</a> or <a href="/tr/">Turkish</a></p>
+  </body>
+</html>
