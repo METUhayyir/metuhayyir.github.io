@@ -315,8 +315,12 @@ html {
         font-size: 32px;
     }
 
-    h2, h3 {
-        font-size: 20px;
+    h2 {
+        font-size: 16px;
+    }
+
+    h3 {
+        font-size: 12px;
     }
 
     p {
@@ -330,7 +334,7 @@ html {
 
     .button, .button2, .button3 {
         width: 80%;
-        font-size: 1rem;
+        font-size: 12px;
         padding: 12px;
     }
 
@@ -343,8 +347,8 @@ html {
     }
 
 	.credits {
-        font-size: 0.8rem;
-        margin-top: 120px;
+        font-size: 0.7rem;
+        margin-top: 145px;
         margin-bottom: 20px;
     }
 
@@ -408,4 +412,12 @@ html {
 		font-size: 14px;
 		line-height: 1.4;
 	}
+
+    .container {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 50px;
+        text-align: center;
+        
+    }
 }
