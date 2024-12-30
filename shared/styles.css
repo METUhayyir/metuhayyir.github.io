@@ -57,7 +57,7 @@ body {
 	width: 200px;
 	margin-left: auto;
     margin-right: auto;
-	margin-top: 170px;
+	margin-top: 7%;
 	border-radius: 8px;
 	border-style: none;
 	
@@ -287,6 +287,36 @@ html {
 .flag:hover {
     transform: scale(1.1);
     opacity: 0.8;
+}
+
+.info-section {
+    margin-top: 20px;
+}
+.info-content {
+    display: none;
+    background-color: transparent;
+    border: none;
+    padding: 10px;
+    margin-top: 10px;
+    color: #333;
+}
+.info-content.hidden {
+    display: none;
+}
+.info-content ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+#infoToggle {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+#infoToggle:hover {
+    background-color: #0056b3;
 }
 
 @media only screen and (max-width: 768px) {

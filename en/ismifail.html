@@ -49,6 +49,17 @@
 			
 			<button id="skipbutton" onclick="nextWord(); document.getElementById('result').textContent = 'Word Skipped!'; document.getElementById('result').style.color='Blue'">Skip Word</button>
 			<button id="showbutton" onclick="showAnswer()">Show Answer</button>
+			<div class="info-section">
+				<button id="infoToggle" onclick="toggleInfo()">What is Ism-i Fail?</button>
+				<div id="infoContent" class="info-content hidden">
+					<p>Ism-i Fail (اسم فاعل) is the active participle in Ottoman Turkish. It represents the doer of the action.</p>
+					<p>It is formed by adding alif "ا" after the triliteral roots' first letter. If the root is xxx, it becomes xxاx. For example:</p>
+						<dl>
+							<li>كتب (kataba - to write) → كاتب (kātib - writer)</li>
+						</dl>
+					</p>
+				</div>
+			</div>
 		</div>
 
 	<script>
@@ -126,6 +137,18 @@
 			document.getElementById("result").style.color = "blue";
 		}
 	displayWord();
+	
+	function toggleInfo() {
+			const infoContent = document.getElementById("infoContent");
+			if (infoContent.style.display === "none" || infoContent.classList.contains("hidden")) {
+				infoContent.style.display = "block";
+				infoContent.classList.remove("hidden");
+			} else {
+				infoContent.style.display = "none";
+				infoContent.classList.add("hidden");
+			}
+		}
+
 
 	</script>
 
