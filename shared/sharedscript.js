@@ -6,8 +6,12 @@ const languageSwitcherHTML = `
 `;
 
 document.addEventListener("DOMContentLoaded", function () {
-
-    document.body.insertAdjacentHTML("beforeend", languageSwitcherHTML);
+    const languageSwitcherContainer = document.getElementById("language-switcher");
+    if (languageSwitcherContainer) {
+        languageSwitcherContainer.innerHTML = languageSwitcherHTML;
+    } else {
+        document.body.insertAdjacentHTML("beforeend", languageSwitcherHTML);
+    }
 
     document.getElementById("turkish-flag").addEventListener("click", function() {
         changeLanguage('tr');
@@ -17,10 +21,11 @@ document.addEventListener("DOMContentLoaded", function () {
         changeLanguage('en');
     });
 
-    const userLang = navigator.language || navigator.userLanguage; 
-    const currentPath = window.location.pathname.replace(/^\/(tr|en)\//, '/');
+    const userLang = navigator.language || navigator.userLanguage;
+    const currentPath = window.location.pathname;
+    const currentLang = currentPath.split('/')[1];
 
-    if (currentPath === "/") {
+    if (currentPath === "/" || currentLang === "") {
         if (userLang.includes('tr')) {
             window.location.href = "/tr";
         } else {
@@ -31,11 +36,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function changeLanguage(language) {
     let currentPath = window.location.pathname;
-    currentPath = currentPath.replace(/^\/(tr|en)\//, "/");
+    const currentLang = currentPath.split('/')[1];
 
-    if (language === 'tr') {
-        window.location.href = "/tr" + currentPath;
-    } else if (language === 'en') {
-        window.location.href = "/en" + currentPath;
+    if (language !== currentLang) {
+        currentPath = currentPath.replace(/^\/(tr|en)\//, "/");
+
+        window.location.href = `/${language}${currentPath}`;
     }
 }
