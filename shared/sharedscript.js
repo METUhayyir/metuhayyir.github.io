@@ -21,8 +21,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const userLang = navigator.language || navigator.userLanguage; 
     const currentPath = window.location.pathname.replace(/^\/(tr|en)\//, '/');
+    const currentLang = window.location.pathname.split('/')[1];
 
-    if (currentPath === "/" && !window.location.pathname.includes("/tr") && !window.location.pathname.includes("/en")) {
+    if (currentPath === "/" && !currentLang) {
         if (userLang.includes('tr')) {
             window.location.href = "/tr";
         } else {
@@ -35,9 +36,13 @@ function changeLanguage(language) {
     let currentPath = window.location.pathname;
     currentPath = currentPath.replace(/^\/(tr|en)\//, "/");
 
-    if (language === 'tr') {
-        window.location.href = "/tr" + currentPath;
-    } else if (language === 'en') {
-        window.location.href = "/en" + currentPath;
+    const currentLang = window.location.pathname.split('/')[1];
+    
+    if ((language === 'tr' && currentLang !== 'tr') || (language === 'en' && currentLang !== 'en')) {
+        if (language === 'tr') {
+            window.location.href = "/tr" + currentPath;
+        } else if (language === 'en') {
+            window.location.href = "/en" + currentPath;
+        }
     }
 }
