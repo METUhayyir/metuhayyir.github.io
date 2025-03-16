@@ -6,8 +6,10 @@ const languageSwitcherHTML = `
 `;
 
 document.addEventListener("DOMContentLoaded", function () {
-
-    document.body.insertAdjacentHTML("beforeend", languageSwitcherHTML);
+    const languageSwitcherContainer = document.getElementById("language-switcher");
+    if (languageSwitcherContainer) {
+        languageSwitcherContainer.innerHTML = languageSwitcherHTML;
+    }
 
     document.getElementById("turkish-flag").addEventListener("click", function() {
         changeLanguage('tr');
@@ -20,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const userLang = navigator.language || navigator.userLanguage; 
     const currentPath = window.location.pathname.replace(/^\/(tr|en)\//, '/');
 
-    if (currentPath === "/") {
+    if (currentPath === "/" && !window.location.pathname.includes("/tr") && !window.location.pathname.includes("/en")) {
         if (userLang.includes('tr')) {
             window.location.href = "/tr";
         } else {
