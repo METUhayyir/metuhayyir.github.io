@@ -14,10 +14,6 @@
 	</head>
 	
 	<body>
-		<div class="language-switcher">
-			<img src="../shared/img/Turkishlanguage.png" alt="Turkish Flag" class="flag" id="turkish-flag" onclick="changeLanguage('tr')" />
-			<img src="../shared/img/Englishlanguage.png" alt="English Flag" class="flag" id="english-flag" onclick="changeLanguage('en')" />
-		</div>
 		<audio loop id="bgmusic">
 			<source src="../shared/sound/bgmusic.mp3" type="audio/mp3">
 		</audio>
@@ -33,26 +29,7 @@
 		<div class="credits" id="credits" onclick="document.getElementById('bgmusic').play()">
 			Kuzey Ilgar HIST & Berken CENG
 		</div>
-		<script>
-    		const userLang = navigator.language || navigator.userLanguage; 
-    		const currentPath = window.location.pathname;
-				if (currentPath === "/") {
-					if (userLang.startsWith('tr')) {
-						window.location.href = "/tr/";
-					} else {
-						window.location.href = "/en/";
-					}
-				}
-				function changeLanguage(language) {
-					if (language === 'tr') {
-						window.location.href = '../tr/index.html';
-					} else if (language === 'en') {
-						window.location.href = '../en/index.html';
-					}
-				}
-
-
-		</script>	
+		<script src="../shared/sharedscript.js"></script>	
 	
 	
 	
