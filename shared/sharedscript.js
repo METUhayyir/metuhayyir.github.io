@@ -1,9 +1,6 @@
-const isLocal = window.location.protocol === "file:"; 
-const depth = window.location.pathname.split('/').length - (isLocal ? 3 : 2);
-const sharedPath = "../".repeat(depth) + "shared";
+const isNested = window.location.pathname.indexOf("/vezin/") !== -1;
+const sharedPath = isNested ? "../../shared" : "../shared";
 
-console.log("Current Path:", window.location.pathname);
-console.log("Detected Depth:", depth);
 console.log("Calculated sharedPath:", sharedPath);
 
 const languageSwitcherHTML = `
