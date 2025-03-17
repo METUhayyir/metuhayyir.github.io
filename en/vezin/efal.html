@@ -2,13 +2,13 @@
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>METUhayyir</title>
-		<link rel="shortcut icon" type="image/png" href="../shared/img/favicon.png">
-		<link href="../shared/styles.css" rel="stylesheet"/>
+		<link rel="shortcut icon" type="image/png" href="../../shared/img/favicon.png">
+		<link href="../../shared/styles.css" rel="stylesheet"/>
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Reem+Kufi:wght@400..700&display=swap" rel="stylesheet">
 		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7334942805048387"
-		crossorigin="anonymous"></script>
+     crossorigin="anonymous"></script>
 	</head>
 	
 	<body>
@@ -19,13 +19,13 @@
 	
 		<div class="container">
 
-			<div id="result" class="result">Bol Şans!</div>
+			<div id="result" class="result">Good luck!</div>
 
 			<div id="wordDisplay" class="word-display">عثمان</div>
 
-			<label for="answerInput">Cevabınızı buraya yazınız:</label><br>
-			<input type="text" id="answerInput" placeholder="Cevabı yazınız">
-			<button id="submitbutton" onclick="checkAnswer()">Gönder</button>
+			<label for="answerInput">Type the root in Ef'al vezin:</label><br>
+			<input type="text" id="answerInput" placeholder="Enter answer">
+			<button id="submitbutton" onclick="checkAnswer()">Submit</button>
 			
 			<div id="virtualKeyboard">
 				<button class="key" onclick="addLetter('ʿ')">ʿ</button>
@@ -47,47 +47,20 @@
 				<button class="key" onclick="addLetter('ī')">ī</button>
 			</div>
 			
-			<button id="skipbutton" onclick="nextWord(); document.getElementById('result').textContent = 'Kelime Geçildi!'; document.getElementById('result').style.color='Blue'">Kelimeyi Geç</button>
-			<button id="showbutton" onclick="showAnswer()">Cevabı Göster</button>
+			<button id="skipbutton" onclick="nextWord(); document.getElementById('result').textContent = 'Word Skipped!'; document.getElementById('result').style.color='Blue'">Skip Word</button>
+			<button id="showbutton" onclick="showAnswer()">Show Answer</button>
 		</div>
 
 	<script>
 		const words = [
-			{ ottoman: 'عثمان', answer: ['ʿOs̲mān'] },
-			{ ottoman: 'باش', answer: ['Baş'] },
-			{ ottoman: 'تاش', answer: ['Taş'] },
-			{ ottoman: 'قاش', answer: ['ḳaş'] },
-			{ ottoman: 'اکمک', answer: ['Ekmek'] },
-			{ ottoman: 'صوک', answer: ['ṣoñ'] },
-			{ ottoman: 'تورک', answer: ['Türk'] },
-			{ ottoman: 'صری', answer: ['ṣarı'] },
-			{ ottoman: 'دوکون', answer: ['Düğün', 'Dökün'] },
-			{ ottoman: 'دوقون', answer: ['Doḳun'] },
-			{ ottoman: 'تدريس', answer: ['Tedrīs'] },
-			{ ottoman: 'آطه', answer: ['Aṭa', 'Ada'] },
-			{ ottoman: 'آناطولی', answer: ['Anaṭoli', 'Anadolu'] },
-			{ ottoman: 'علی', answer: ['ʿAli'] },
-			{ ottoman: 'عمر', answer: ['ʿÖmer'] },
-			{ ottoman: 'عصمت', answer: ['ʿİṣmet', 'ʿiṣmet'] },
-			{ ottoman: 'کوکرجن', answer: ['Güvercin'] },
-			{ ottoman: 'يکديکر', answer: ['Yekdīğer', 'Yekdīger'] },
-			{ ottoman: 'اهميت', answer: ['Ehemmiyet'] },
-			{ ottoman: 'لاقيد', answer: ['Lāḳayd'] },
-			{ ottoman: 'اوزنکی', answer: ['Üzengi'] },
-			{ ottoman: 'عيسی', answer: ['ʿīsā'] },
-			{ ottoman: 'موصطفی', answer: ['Muṣṭafā'] },
-			{ ottoman: 'يحيی', answer: ['Yaḥyā'] },
-			{ ottoman: 'معنی', answer: ['Maʿnā'] },
-			{ ottoman: 'فتوی', answer: ['Fetvā'] },
-			{ ottoman: 'خواجه', answer: ['ḫāce'] },
-			{ ottoman: 'خوان', answer: ['ḫān'] },
-			{ ottoman: 'بنا', answer: ['binā'] },
-			{ ottoman: 'جفا', answer: ['cefā'] },
-			{ ottoman: 'امرا', answer: ['Ümerā'] },
-			{ ottoman: 'وبا', answer: ['Vebā'] },
-			{ ottoman: 'ادبا', answer: ['Üdebā'] },
-			{ ottoman: 'التجا', answer: ['İlticā'] },
-			
+			{ ottoman: 'ورق', answer: ['evrāḳ'] },
+			{ ottoman: 'دور', answer: ['edvār'] },
+			{ ottoman: 'برّ ', answer: ['ebrār'] },
+			{ ottoman: 'طفل', answer: ['eṭfāl'] },
+			{ ottoman: 'عین', answer: ['ʿayān'] },
+			{ ottoman: 'وقف', answer: ['evḳāf'] },
+			{ ottoman: 'خبر', answer: ['aḫbār'] },
+			{ ottoman: 'شكل', answer: ['eşkāl'] },
 			
 		];
 		
@@ -102,19 +75,19 @@
 			const correctAnswers = words[currentIndex].answer;
 
 			if (correctAnswers.some(answer => userAnswer.toLowerCase() === answer.toLowerCase())) {
-				document.getElementById("result").textContent = `${userAnswer} doğruydu!`;
+				document.getElementById("result").textContent = `Your ${userAnswer} answer was correct!`;
 				document.getElementById("result").style.color = "green";
 				words.splice(currentIndex,1);
 				nextWord();
 				
 			} else {
-				document.getElementById("result").textContent = `Yanlış.`;
+				document.getElementById("result").textContent = `Incorrect.`;
 				document.getElementById("result").style.color = "red";
 			}
 		}
 		function nextWord() {
 			if(words.length == 0){
-				document.getElementById("result").textContent = "Tebrikler! Alıştırmayı tamamladınız.";
+				document.getElementById("result").textContent = "Congratulations! You have completed the practice.";
 				document.getElementById("result").style.color = "green";
 				document.getElementById("skipbutton").disabled = true;
 				document.getElementById("submitbutton").disabled = true;
@@ -147,9 +120,9 @@
 	</script>
 
 	<div class="button2">
-			<p><a href="index.html">Menüye dön</a></p>
+			<p><a href="../menu2.html">Back to menu</a></p>
 	</div>
-	<script src="../shared/sharedscript.js"></script>
+	<script src="../../shared/sharedscript.js"></script>
 	
 </body>
 		
