@@ -1,5 +1,5 @@
-const depth = window.location.pathname.split('/').length - 2;
-const sharedPath = "../".repeat(depth) + "shared";
+const depth = window.location.pathname.replace(/^\/[A-Za-z]:/, "").split('/').length - 2;
+const sharedPath = "../".repeat(Math.max(depth, 0)) + "shared";
 
 console.log("Current Path:", window.location.pathname);
 console.log("Detected Depth:", depth);
