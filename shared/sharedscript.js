@@ -1,7 +1,14 @@
+const depth = window.location.pathname.split('/').length - 2;
+const sharedPath = "../".repeat(depth) + "shared";
+
+console.log("Current Path:", window.location.pathname);
+console.log("Detected Depth:", depth);
+console.log("Calculated sharedPath:", sharedPath);
+
 const languageSwitcherHTML = `
     <div class="language-switcher">
-        <img src="../shared/img/Turkishlanguage.png" alt="Turkish Flag" class="flag" id="turkish-flag" />
-        <img src="../shared/img/Englishlanguage.png" alt="English Flag" class="flag" id="english-flag" />
+        <img src="${sharedPath}/img/Turkishlanguage.png" alt="Turkish Flag" class="flag" id="turkish-flag" />
+        <img src="${sharedPath}/img/Englishlanguage.png" alt="English Flag" class="flag" id="english-flag" />
     </div>
 `;
 
