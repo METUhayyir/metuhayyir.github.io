@@ -1,4 +1,4 @@
-<html lang=“tr”>
+<html lang=“en”>
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>METUhayyir</title>
@@ -19,13 +19,13 @@
 	
 		<div class="container">
 
-			<div id="result" class="result">Bol Şans!</div>
+			<div id="result" class="result">Good luck!</div>
 
 			<div id="wordDisplay" class="word-display">عثمان</div>
 
-			<label for="answerInput">İsm-i faili fu'ala vezninde yazınız:</label><br>
-			<input type="text" id="answerInput" placeholder="Cevabı yazınız">
-			<button id="submitbutton" onclick="checkAnswer()">Gönder</button>
+			<label for="answerInput">Type the noun in Efa'ile vezin:</label><br>
+			<input type="text" id="answerInput" placeholder="Enter answer">
+			<button id="submitbutton" onclick="checkAnswer()">Submit</button>
 			
 			<div id="virtualKeyboard">
 				<button class="key" onclick="addLetter('ʿ')">ʿ</button>
@@ -47,19 +47,14 @@
 				<button class="key" onclick="addLetter('ī')">ī</button>
 			</div>
 			
-			<button id="skipbutton" onclick="nextWord(); document.getElementById('result').textContent = 'Kelime Geçildi!'; document.getElementById('result').style.color='Blue'">Kelimeyi Geç</button>
-			<button id="showbutton" onclick="showAnswer()">Cevabı Göster</button>
+			<button id="skipbutton" onclick="nextWord(); document.getElementById('result').textContent = 'Word Skipped!'; document.getElementById('result').style.color='Blue'">Skip Word</button>
+			<button id="showbutton" onclick="showAnswer()">Show Answer</button>
 		</div>
 
 	<script>
 		const words = [
-			{ ottoman: 'عالم', answer: ['ʿulemā'] },
-			{ ottoman: 'كبیر', answer: ['küberā'] },
-			{ ottoman: 'جاهل ', answer: ['cühelā'] },
-			{ ottoman: 'غریب', answer: ['ġurebā'] },
-			{ ottoman: 'فقیر', answer: ['fuḳarā'] },
-			{ ottoman: 'وزیر', answer: ['vüzerā'] },
-			
+			{ ottoman: 'استاذ', answer: ['esātiz̲e'] },
+			{ ottoman: 'ابلیس', answer: ['ebālise'] },	
 		];
 		
 		let currentIndex = 0;
@@ -73,19 +68,19 @@
 			const correctAnswers = words[currentIndex].answer;
 
 			if (correctAnswers.some(answer => userAnswer.toLowerCase() === answer.toLowerCase())) {
-				document.getElementById("result").textContent = `${userAnswer} doğruydu!`;
+				document.getElementById("result").textContent = `Your ${userAnswer} answer was correct!`;
 				document.getElementById("result").style.color = "green";
 				words.splice(currentIndex,1);
 				nextWord();
 				
 			} else {
-				document.getElementById("result").textContent = `Yanlış.`;
+				document.getElementById("result").textContent = `Incorrect.`;
 				document.getElementById("result").style.color = "red";
 			}
 		}
 		function nextWord() {
 			if(words.length == 0){
-				document.getElementById("result").textContent = "Tebrikler! Alıştırmayı tamamladınız.";
+				document.getElementById("result").textContent = "Congratulations! You have completed the practice.";
 				document.getElementById("result").style.color = "green";
 				document.getElementById("skipbutton").disabled = true;
 				document.getElementById("submitbutton").disabled = true;
@@ -118,7 +113,7 @@
 	</script>
 
 	<div class="button2">
-			<p><a href="../menu2.html">Menüye dön</a></p>
+			<p><a href="../menu2.html">Back to menu</a></p>
 	</div>
 	<script src="../../shared/sharedscript.js"></script>
 	
